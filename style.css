@@ -1,0 +1,1959 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #f58fb3, #f7b6cf, #f39fbe);
+    color: white;
+    text-align: center;
+    overflow-y: auto;
+}
+
+.container {
+    position: relative;
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.20);
+    padding: 45px 35px;
+    border-radius: 28px;
+    width: min(90%, 500px);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.15);
+    animation: romanticPageEnter 0.8s ease;
+    overflow: hidden;
+}
+
+
+/* =========================
+   İÇERİK
+========================= */
+
+.page-content {
+    position: relative;
+    z-index: 2;
+}
+
+
+/* =========================
+   KUTU İÇİ KALPLER
+========================= */
+
+.inside-hearts {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.inside-hearts span {
+    position: absolute;
+    bottom: -35px;
+    color: rgba(255, 255, 255, 0.55);
+    font-size: 20px;
+    animation: insideHeartFloat 8s linear infinite;
+}
+
+.inside-hearts span:nth-child(1) {
+    left: 8%;
+    animation-delay: 0s;
+    font-size: 17px;
+}
+
+.inside-hearts span:nth-child(2) {
+    left: 22%;
+    animation-delay: 2s;
+    font-size: 22px;
+}
+
+.inside-hearts span:nth-child(3) {
+    left: 38%;
+    animation-delay: 4s;
+    font-size: 16px;
+}
+
+.inside-hearts span:nth-child(4) {
+    left: 52%;
+    animation-delay: 1s;
+    font-size: 21px;
+}
+
+.inside-hearts span:nth-child(5) {
+    left: 68%;
+    animation-delay: 5s;
+    font-size: 18px;
+}
+
+.inside-hearts span:nth-child(6) {
+    left: 82%;
+    animation-delay: 3s;
+    font-size: 23px;
+}
+
+.inside-hearts span:nth-child(7) {
+    left: 92%;
+    animation-delay: 6s;
+    font-size: 15px;
+}
+
+@keyframes insideHeartFloat {
+
+    0% {
+        bottom: -35px;
+        opacity: 0;
+        transform: translateX(0) rotate(0deg);
+    }
+
+    15% {
+        opacity: 0.55;
+    }
+
+    50% {
+        transform: translateX(12px) rotate(8deg);
+    }
+
+    80% {
+        opacity: 0.35;
+    }
+
+    100% {
+        bottom: 110%;
+        opacity: 0;
+        transform: translateX(-12px) rotate(-8deg);
+    }
+}
+
+
+/* =========================
+   GENEL
+========================= */
+
+h1 {
+    font-size: 34px;
+    margin-bottom: 15px;
+}
+
+h2 {
+    margin-top: 30px;
+    font-size: 26px;
+}
+
+p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+
+/* =========================
+   GİRİŞ
+========================= */
+
+input {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 15px;
+    outline: none;
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+input:focus {
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.25);
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 15px;
+    background: white;
+    color: #e85b8a;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    transform: scale(1.03);
+}
+
+button:active {
+    transform: scale(0.97);
+}
+
+
+/* =========================
+   SAYFA GEÇİŞLERİ
+========================= */
+
+.page-transition {
+    animation: pageTransition 0.8s ease;
+}
+
+@keyframes pageTransition {
+
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+@keyframes romanticPageEnter {
+
+    0% {
+        opacity: 0;
+        transform: scale(0.97);
+        filter: blur(4px);
+    }
+
+    60% {
+        opacity: 1;
+        filter: blur(0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+        filter: blur(0);
+    }
+
+}
+
+
+/* =========================
+   HİKÂYEMİZİN BAŞLANGICI
+========================= */
+
+#storySection p {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: storyFade 1s ease forwards;
+}
+
+#storySection p:nth-of-type(1) {
+    animation-delay: 0.3s;
+}
+
+#storySection p:nth-of-type(2) {
+    animation-delay: 0.8s;
+}
+
+#storySection p:nth-of-type(3) {
+    animation-delay: 1.3s;
+}
+
+#storySection p:nth-of-type(4) {
+    animation-delay: 1.8s;
+}
+
+#storySection p:nth-of-type(5) {
+    animation-delay: 2.3s;
+}
+
+#storySection p:nth-of-type(6) {
+    animation-delay: 2.8s;
+}
+
+@keyframes storyFade {
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================
+   ANILARIMIZ
+========================= */
+
+.memories-title {
+    animation: memoriesTitle 1s ease forwards;
+}
+
+.memories-intro {
+    opacity: 0;
+    animation: memoriesIntro 1s ease 0.4s forwards;
+}
+
+@keyframes memoriesTitle {
+
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+@keyframes memoriesIntro {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================
+   FOTOĞRAFLAR
+========================= */
+
+.memory-media {
+    position: relative;
+    z-index: 5;
+
+    width: 80%;
+    max-width: 350px;
+
+    margin: 20px auto 0;
+
+    border-radius: 20px;
+
+    cursor: pointer;
+
+    opacity: 0;
+
+    animation:
+        memoryPhotoAppear 1.2s ease forwards;
+
+    transition:
+        transform 0.4s ease;
+}
+
+.memory-media:hover {
+    transform: scale(1.08) !important;
+}
+
+.memory-photo {
+    width: 100%;
+    height: auto;
+    display: block;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.20);
+}
+
+.memory-second .memory-media {
+    animation-delay: 0.5s;
+}
+
+@keyframes memoryPhotoAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================
+   ANILAR - YAZILAR
+========================= */
+
+.memory-text {
+    margin-top: 20px;
+    font-size: 18px;
+    line-height: 1.6;
+
+    opacity: 0;
+
+    transform: translateY(20px);
+
+    animation:
+        memoryTextAppear 1.2s ease forwards;
+
+    transition:
+        transform 0.3s ease;
+}
+
+.memory-text:hover {
+    transform: scale(1.02);
+}
+
+.memory-text-second {
+    animation-delay: 1s;
+}
+
+@keyframes memoryTextAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================
+   İKİNCİ ANI
+========================= */
+
+.memory-second {
+    margin-top: 50px;
+    padding-bottom: 40px;
+}
+
+
+/* =========================
+   VİDEO
+========================= */
+
+.memory-video {
+    margin-top: 45px;
+    width: 100%;
+}
+
+.memory-video-wrap {
+    position: relative;
+    z-index: 5;
+
+    width: 100%;
+
+    margin-top: 15px;
+
+    border-radius: 20px;
+
+    cursor: pointer;
+
+    opacity: 0;
+
+    animation:
+        videoAppear 1.2s ease forwards;
+
+    transition:
+        transform 0.4s ease;
+}
+
+.memory-video-wrap:hover {
+    transform: scale(1.05) !important;
+}
+
+.memory-video-player {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+
+    display: block;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 10px 35px rgba(0, 0, 0, 0.20);
+}
+
+@keyframes videoAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================
+   ANILARDAN ÇIKIŞ
+========================= */
+
+#leftFromMemories {
+    margin-top: 30px;
+
+    opacity: 0;
+
+    animation:
+        buttonAppear 1s ease 1.5s forwards;
+}
+
+@keyframes buttonAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================
+   SENDEN BANA KALANLAR
+========================= */
+
+#letterButton {
+    margin-top: 25px;
+}
+
+
+/* =========================
+   MEKTUP
+========================= */
+
+.letter-box {
+    background: rgba(255, 255, 255, 0.12);
+
+    padding: 25px;
+
+    border-radius: 22px;
+
+    margin-top: 25px;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.25);
+
+    backdrop-filter: blur(8px);
+
+    box-shadow:
+        0 8px 30px rgba(0, 0, 0, 0.08);
+
+    animation:
+        letterAppear 1.2s ease forwards;
+}
+
+.letter-box p {
+    font-size: 17px;
+    line-height: 1.8;
+    text-align: left;
+    margin-bottom: 22px;
+}
+
+@keyframes letterAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================
+   FİNAL
+========================= */
+
+#finalButton {
+    margin-top: 30px;
+}
+
+.final-text {
+    animation:
+        finalFade 2s ease forwards;
+}
+
+@keyframes finalFade {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================
+   TELEFON
+========================= */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 15px;
+
+        align-items: flex-start;
+
+        padding-top: 30px;
+    }
+
+    .container {
+        width: 100%;
+
+        padding: 30px 20px;
+
+        border-radius: 24px;
+    }
+
+    h1 {
+        font-size: 27px;
+        line-height: 1.3;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    p {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    .memory-media {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .memory-photo {
+        width: 100%;
+    }
+
+    .memory-video-wrap {
+        width: 100%;
+    }
+
+    .memory-video-player {
+        width: 100%;
+        border-radius: 16px;
+    }
+
+    .letter-box {
+        padding: 20px 17px;
+    }
+
+    .letter-box p {
+        font-size: 16px;
+        line-height: 1.7;
+    }
+
+    button {
+        padding: 14px;
+        font-size: 15px;
+    }
+
+    input {
+        padding: 14px;
+        font-size: 15px;
+    }
+
+    .inside-hearts span {
+        font-size: 17px;
+    }
+
+}
+/* =========================
+   DAHA CANLI KALPLER
+========================= */
+
+.inside-hearts span {
+    color: rgba(255, 255, 255, 0.85);
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.45);
+    animation:
+        insideHeartFloat 6s ease-in-out infinite,
+        heartGlow 2s ease-in-out infinite;
+}
+
+@keyframes heartGlow {
+
+    0%, 100% {
+        opacity: 0.55;
+        filter: brightness(1);
+    }
+
+    50% {
+        opacity: 1;
+        filter: brightness(1.35);
+    }
+
+}
+/* =========================
+   GİRİŞ EKRANI - ROMANTİK
+========================= */
+
+.page-content h1 {
+    animation: entranceTitle 1.2s ease forwards;
+}
+
+.page-content > p {
+    animation: entranceText 1.4s ease 0.2s forwards;
+    opacity: 0;
+}
+
+.page-content input {
+    animation: entranceInput 1.4s ease 0.4s forwards;
+    opacity: 0;
+}
+
+.page-content button {
+    animation: entranceButton 1.4s ease 0.6s forwards;
+    opacity: 0;
+}
+
+@keyframes entranceTitle {
+
+    from {
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+@keyframes entranceText {
+
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+@keyframes entranceInput {
+
+    from {
+        opacity: 0;
+        transform: translateY(15px) scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
+}
+
+@keyframes entranceButton {
+
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+.page-content input:focus {
+    box-shadow:
+        0 0 0 3px rgba(255, 255, 255, 0.25),
+        0 0 20px rgba(255, 255, 255, 0.35);
+
+    transition: box-shadow 0.3s ease;
+}
+/* =========================
+   HİKÂYEMİZ - ROMANTİK DOKUNUŞ
+========================= */
+
+#storySection h1 {
+    animation: storyTitleGlow 1.3s ease forwards;
+}
+
+#storySection p {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: storyTextReveal 1s ease forwards;
+}
+
+#storySection p:nth-of-type(1) {
+    animation-delay: 0.3s;
+}
+
+#storySection p:nth-of-type(2) {
+    animation-delay: 0.8s;
+}
+
+#storySection p:nth-of-type(3) {
+    animation-delay: 1.3s;
+}
+
+#storySection p:nth-of-type(4) {
+    animation-delay: 1.8s;
+}
+
+#storySection p:nth-of-type(5) {
+    animation-delay: 2.3s;
+}
+
+#storySection p:nth-of-type(6) {
+    animation-delay: 2.8s;
+}
+
+#storySection p:nth-of-type(5) {
+    text-shadow:
+        0 0 10px rgba(255, 255, 255, 0.35);
+}
+
+#storySection button {
+    opacity: 0;
+    animation:
+        storyButtonReveal 1.2s ease 3.5s forwards;
+}
+
+@keyframes storyTitleGlow {
+
+    from {
+        opacity: 0;
+        transform: translateY(-15px);
+        text-shadow: 0 0 0 rgba(255, 255, 255, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        text-shadow:
+            0 0 15px rgba(255, 255, 255, 0.35);
+    }
+
+}
+
+@keyframes storyTextReveal {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+@keyframes storyButtonReveal {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px) scale(0.96);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
+}
+/* =========================
+   ANILARIMIZ - SİNEMATİK
+========================= */
+
+.memories-title {
+    animation:
+        memoriesTitleSpecial 1.2s ease forwards;
+}
+
+.memories-intro {
+    opacity: 0;
+    animation:
+        memoriesIntroSpecial 1.2s ease 0.3s forwards;
+}
+
+.memory-media {
+    opacity: 0;
+    animation:
+        memoryReveal 1.2s ease 0.6s forwards;
+}
+
+.memory-text {
+    opacity: 0;
+    animation:
+        memoryReveal 1.1s ease 0.9s forwards;
+}
+
+.memory-text-second {
+    animation-delay: 1.3s;
+}
+
+.memory-second {
+    opacity: 0;
+    animation:
+        secondMemoryReveal 1.2s ease 1.5s forwards;
+}
+
+.memory-second .memory-text {
+    animation-delay: 1.8s;
+}
+
+.memory-video {
+    opacity: 0;
+    animation:
+        videoSectionReveal 1.3s ease 2.2s forwards;
+}
+
+.memory-video .memory-text {
+    animation-delay: 2.5s;
+}
+
+#leftFromMemories {
+    opacity: 0;
+    animation:
+        memoriesButtonReveal 1.2s ease 3.2s forwards;
+}
+
+
+@keyframes memoriesTitleSpecial {
+
+    from {
+        opacity: 0;
+        transform: translateY(-20px) scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
+}
+
+
+@keyframes memoriesIntroSpecial {
+
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+@keyframes memoryReveal {
+
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+@keyframes secondMemoryReveal {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+@keyframes videoSectionReveal {
+
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+@keyframes memoriesButtonReveal {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px) scale(0.96);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
+}
+/* =========================
+   SENDEN BANA KALANLAR
+========================= */
+
+.container .page-content > h1 {
+    animation: remainingTitle 1.2s ease forwards;
+}
+
+.container .page-content > .memory-text {
+    opacity: 0;
+    animation: remainingText 1s ease forwards;
+}
+
+/* Yazıları sırayla getir */
+
+.container .page-content > .memory-text:nth-of-type(1) {
+    animation-delay: 0.3s;
+}
+
+.container .page-content > .memory-text:nth-of-type(2) {
+    animation-delay: 0.6s;
+}
+
+.container .page-content > .memory-text:nth-of-type(3) {
+    animation-delay: 0.9s;
+}
+
+.container .page-content > .memory-text:nth-of-type(4) {
+    animation-delay: 1.2s;
+}
+
+.container .page-content > .memory-text:nth-of-type(5) {
+    animation-delay: 1.5s;
+}
+
+.container .page-content > .memory-text:nth-of-type(6) {
+    animation-delay: 1.8s;
+}
+
+.container .page-content > .memory-text:nth-of-type(7) {
+    animation-delay: 2.1s;
+}
+
+.container .page-content > .memory-text:nth-of-type(8) {
+    animation-delay: 2.4s;
+}
+
+.container .page-content > .memory-text:nth-of-type(9) {
+    animation-delay: 2.7s;
+}
+
+.container .page-content > .memory-text:nth-of-type(10) {
+    animation-delay: 3s;
+}
+
+.container .page-content > .memory-text:nth-of-type(11) {
+    animation-delay: 3.3s;
+}
+
+.container .page-content > .memory-text:nth-of-type(12) {
+    animation-delay: 3.6s;
+}
+
+
+/* Son cümleyi özel yap */
+
+.container .page-content > .memory-text:last-of-type {
+    font-size: 20px;
+    font-weight: bold;
+
+    text-shadow:
+        0 0 12px rgba(255, 255, 255, 0.45);
+
+    margin-top: 35px;
+}
+
+
+/* Mektup butonu */
+
+#letterButton {
+    opacity: 0;
+
+    animation:
+        remainingButton 1.2s ease 4.2s forwards;
+}
+
+
+/* Animasyonlar */
+
+@keyframes remainingTitle {
+
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+@keyframes remainingText {
+
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+@keyframes remainingButton {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px) scale(0.96);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
+}
+/* =========================
+   SANA BİR MEKTUBUM VAR
+========================= */
+
+.letter-box {
+    position: relative;
+    overflow: hidden;
+
+    opacity: 0;
+
+    animation:
+        letterBoxSpecial 1.5s ease 0.4s forwards;
+}
+
+.letter-box p {
+    opacity: 0;
+
+    animation:
+        letterParagraph 1.1s ease forwards;
+}
+
+
+/* Paragraflar sırayla */
+
+.letter-box p:nth-child(1) {
+    animation-delay: 0.8s;
+}
+
+.letter-box p:nth-child(2) {
+    animation-delay: 1.5s;
+}
+
+.letter-box p:nth-child(3) {
+    animation-delay: 2.2s;
+}
+
+.letter-box p:nth-child(4) {
+    animation-delay: 2.9s;
+}
+
+.letter-box p:nth-child(5) {
+    animation-delay: 3.6s;
+}
+
+
+/* Son paragraf */
+
+.letter-box p:last-child {
+    font-weight: 500;
+
+    text-shadow:
+        0 0 10px rgba(255, 255, 255, 0.25);
+}
+
+
+/* Başlık */
+
+.page-content > h1 {
+    animation:
+        letterTitle 1.2s ease forwards;
+}
+
+
+/* Final butonu */
+
+#finalButton {
+    opacity: 0;
+
+    animation:
+        letterButton 1.2s ease 4.6s forwards;
+}
+
+
+/* =========================
+   ANİMASYONLAR
+========================= */
+
+@keyframes letterTitle {
+
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+@keyframes letterBoxSpecial {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.97);
+        filter: blur(3px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        filter: blur(0);
+    }
+
+}
+
+
+@keyframes letterParagraph {
+
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+@keyframes letterButton {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px) scale(0.96);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
+}
+/* =========================
+   FİNAL - KAPANIŞ
+========================= */
+
+.final-text {
+    opacity: 0;
+
+    animation:
+        finalRomanticFade 1.5s ease forwards;
+}
+
+
+/* Yazılar sırayla gelsin */
+
+.final-text:nth-child(1) {
+    animation-delay: 0.4s;
+}
+
+.final-text:nth-child(2) {
+    animation-delay: 1.2s;
+}
+
+.final-text:nth-child(3) {
+    animation-delay: 2s;
+}
+
+.final-text:nth-child(4) {
+    animation-delay: 2.8s;
+}
+
+
+/* Son yazı özel */
+
+.final-text:last-child {
+    margin-top: 35px;
+
+    font-size: 28px;
+
+    text-shadow:
+        0 0 15px rgba(255, 255, 255, 0.5),
+        0 0 30px rgba(255, 255, 255, 0.2);
+
+    animation:
+        finalLastText 2s ease 2.8s forwards;
+}
+
+
+/* =========================
+   FİNAL ANİMASYONLARI
+========================= */
+
+@keyframes finalRomanticFade {
+
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+        filter: blur(3px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
+
+}
+
+
+@keyframes finalLastText {
+
+    0% {
+        opacity: 0;
+        transform: translateY(20px) scale(0.95);
+        filter: blur(3px);
+    }
+
+    60% {
+        opacity: 1;
+        transform: translateY(0) scale(1.03);
+        filter: blur(0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        filter: blur(0);
+    }
+
+}
+/* =========================
+   ŞARKI SEÇİM EKRANI
+========================= */
+
+#songSelection {
+    animation: songSelectionAppear 1s ease forwards;
+}
+
+#songSelection h1 {
+    margin-bottom: 12px;
+    text-shadow:
+        0 0 12px rgba(255, 255, 255, 0.35);
+}
+
+#songSelection p {
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+#songSelection button {
+    margin-top: 8px;
+    padding: 17px 15px;
+    background: rgba(255, 255, 255, 0.92);
+    color: #e85b8a;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.10);
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        background 0.35s ease;
+}
+
+#songSelection button:hover {
+    transform: translateY(-4px) scale(1.02);
+    background: white;
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.15),
+        0 0 20px rgba(255, 255, 255, 0.25);
+}
+
+#songSelection button:active {
+    transform: scale(0.97);
+}
+
+@keyframes songSelectionAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px) scale(0.97);
+        filter: blur(3px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        filter: blur(0);
+    }
+
+}
+/* =========================
+   ŞARKI BAŞLANGIÇ EKRANI
+========================= */
+
+.song-start-screen {
+    animation: songStartAppear 1.2s ease forwards;
+}
+
+.song-start-screen h1 {
+    text-shadow:
+        0 0 15px rgba(255, 255, 255, 0.45);
+}
+
+.song-start-screen p {
+    margin-top: 15px;
+    opacity: 0.9;
+}
+
+@keyframes songStartAppear {
+
+    from {
+        opacity: 0;
+        transform: scale(0.94) translateY(15px);
+        filter: blur(4px);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+        filter: blur(0);
+    }
+
+}
+/* =========================
+   HİKÂYEMİZ - DAHA SİNEMATİK
+========================= */
+
+#storySection {
+    animation: storySectionEnter 1s ease forwards;
+}
+
+#storySection h1 {
+    animation:
+        storyHeadingEnter 1.2s ease forwards;
+}
+
+#storySection p {
+    opacity: 0;
+    transform: translateY(25px);
+    animation:
+        storyParagraphEnter 1.1s ease forwards;
+}
+
+#storySection p:nth-of-type(1) {
+    animation-delay: 0.5s;
+}
+
+#storySection p:nth-of-type(2) {
+    animation-delay: 1.1s;
+}
+
+#storySection p:nth-of-type(3) {
+    animation-delay: 1.7s;
+}
+
+#storySection p:nth-of-type(4) {
+    animation-delay: 2.3s;
+}
+
+#storySection p:nth-of-type(5) {
+    animation-delay: 2.9s;
+}
+
+#storySection p:nth-of-type(6) {
+    animation-delay: 3.5s;
+}
+
+#storySection button {
+    opacity: 0;
+    transform: translateY(20px) scale(0.96);
+    animation:
+        storyButtonEnter 1.2s ease 4.4s forwards;
+}
+
+#storySection p:nth-of-type(5) {
+    text-shadow:
+        0 0 10px rgba(255, 255, 255, 0.4),
+        0 0 20px rgba(255, 255, 255, 0.12);
+}
+
+@keyframes storySectionEnter {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+}
+
+@keyframes storyHeadingEnter {
+
+    from {
+        opacity: 0;
+        transform: translateY(-20px) scale(0.96);
+        text-shadow: 0 0 0 rgba(255, 255, 255, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        text-shadow:
+            0 0 15px rgba(255, 255, 255, 0.35);
+    }
+
+}
+
+@keyframes storyParagraphEnter {
+
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+@keyframes storyButtonEnter {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px) scale(0.96);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
+}
+/* =========================
+   ANILAR SAYFASI ANİMASYONLARI
+========================= */
+
+.memories-title,
+.memories-intro,
+.memory-media,
+.memory-text,
+.memory-video,
+#leftFromMemories {
+    animation: memoriesFadeUp 0.8s ease both;
+}
+
+.memories-intro {
+    animation-delay: 0.15s;
+}
+
+.memory-media {
+    animation-delay: 0.25s;
+}
+
+.memory-text {
+    animation-delay: 0.35s;
+}
+
+.memory-video {
+    animation-delay: 0.45s;
+}
+
+#leftFromMemories {
+    animation-delay: 0.6s;
+}
+
+
+@keyframes memoriesFadeUp {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+/* =========================
+   SENDEN BANA KALANLAR
+========================= */
+
+#leftFromMemories + * {
+    margin-top: 20px;
+}
+
+#letterButton {
+    animation: memoriesFadeUp 0.8s ease 0.8s both;
+}
+
+#storySection + * {
+    animation: memoriesFadeUp 0.8s ease both;
+}
+.page-content .memory-text {
+    animation: memoriesFadeUp 0.8s ease both;
+}
+
+.page-content .memory-text:nth-of-type(1) {
+    animation-delay: 0.1s;
+}
+
+.page-content .memory-text:nth-of-type(2) {
+    animation-delay: 0.25s;
+}
+
+.page-content .memory-text:nth-of-type(3) {
+    animation-delay: 0.4s;
+}
+
+.page-content .memory-text:nth-of-type(4) {
+    animation-delay: 0.55s;
+}
+
+.page-content .memory-text:nth-of-type(5) {
+    animation-delay: 0.7s;
+}
+
+.page-content .memory-text:nth-of-type(6) {
+    animation-delay: 0.85s;
+}
+
+.page-content .memory-text:nth-of-type(7) {
+    animation-delay: 1s;
+}
+/* =========================
+   SENDEN BANA KALANLAR
+   ROMANTİK GÖRÜNÜM
+========================= */
+
+.page-content .memory-text {
+    position: relative;
+    padding: 14px 10px;
+    margin: 8px 0;
+    line-height: 1.7;
+    animation: memoryTextAppear 0.8s ease both;
+}
+
+/* Küçük kalp */
+
+.page-content .memory-text::after {
+    content: "♡";
+    display: block;
+    margin-top: 5px;
+    font-size: 14px;
+    opacity: 0.55;
+}
+
+/* Yazıların sırayla gelmesi */
+
+.page-content .memory-text:nth-of-type(1) {
+    animation-delay: 0.1s;
+}
+
+.page-content .memory-text:nth-of-type(2) {
+    animation-delay: 0.3s;
+}
+
+.page-content .memory-text:nth-of-type(3) {
+    animation-delay: 0.5s;
+}
+
+.page-content .memory-text:nth-of-type(4) {
+    animation-delay: 0.7s;
+}
+
+.page-content .memory-text:nth-of-type(5) {
+    animation-delay: 0.9s;
+}
+
+.page-content .memory-text:nth-of-type(6) {
+    animation-delay: 1.1s;
+}
+
+.page-content .memory-text:nth-of-type(7) {
+    animation-delay: 1.3s;
+}
+
+.page-content .memory-text:nth-of-type(8) {
+    animation-delay: 1.5s;
+}
+
+.page-content .memory-text:nth-of-type(9) {
+    animation-delay: 1.7s;
+}
+
+@keyframes memoryTextAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+/* =========================
+   MEKTUP BÖLÜMÜ 💌
+========================= */
+
+.letter-box {
+    position: relative;
+    margin: 25px auto;
+    padding: 28px 22px;
+
+    width: 90%;
+    max-width: 600px;
+
+    background: rgba(255, 245, 248, 0.88);
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 10px 30px rgba(80, 20, 40, 0.12);
+
+    color: #4a2733;
+
+    line-height: 1.8;
+
+    text-align: left;
+
+    animation: letterAppear 1s ease both;
+}
+
+/* Mektup yazıları */
+
+.letter-box p {
+    margin-bottom: 22px;
+
+    opacity: 0;
+
+    animation: letterTextAppear 0.8s ease forwards;
+}
+
+/* Yazıların sırayla gelmesi */
+
+.letter-box p:nth-child(1) {
+    animation-delay: 0.3s;
+}
+
+.letter-box p:nth-child(2) {
+    animation-delay: 0.6s;
+}
+
+.letter-box p:nth-child(3) {
+    animation-delay: 0.9s;
+}
+
+.letter-box p:nth-child(4) {
+    animation-delay: 1.2s;
+}
+
+.letter-box p:nth-child(5) {
+    animation-delay: 1.5s;
+}
+
+/* Mektubun giriş animasyonu */
+
+@keyframes letterAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(25px) scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
+}
+
+/* Yazı animasyonu */
+
+@keyframes letterTextAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+/* Son buton */
+
+#finalButton {
+    margin-top: 15px;
+
+    animation:
+        letterButtonAppear 0.8s ease 1.9s both;
+}
+
+@keyframes letterButtonAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+/* =========================
+   GİZEMLİ FİNAL ♾️❤️
+========================= */
+
+.final-text {
+    animation: finalAppear 1s ease both;
+}
+
+.final-text:nth-child(1) {
+    animation-delay: 0.3s;
+}
+
+.final-text:nth-child(2) {
+    animation-delay: 0.9s;
+}
+
+.final-text:nth-child(3) {
+    animation-delay: 1.5s;
+}
+
+.final-text:nth-child(4) {
+    animation-delay: 2.1s;
+}
+
+/* Final başlığı */
+
+.final-text:first-child {
+    font-size: 28px;
+    line-height: 1.4;
+}
+
+/* Sonsuzluk işareti */
+
+.final-text:last-child {
+    margin-top: 35px;
+    font-size: 25px;
+
+    animation:
+        finalAppear 1s ease 2.1s both,
+        infinityGlow 2s ease-in-out 3.2s infinite;
+}
+
+/* Yumuşak giriş */
+
+@keyframes finalAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+        filter: blur(4px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
+
+}
+
+/* ♾️ hafif parlasın */
+
+@keyframes infinityGlow {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+
+    50% {
+        transform: scale(1.08);
+        opacity: 1;
+    }
+
+}
