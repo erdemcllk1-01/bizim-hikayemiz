@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#d48b8c">
+  <meta name="description" content="Erdem ve Cemre'nin birlikte yazdığı küçük hikâye.">
+  <title>Erdem &amp; Cemre — Bizim Hikâyemiz</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="sunset-sky" aria-hidden="true">
+    <span class="cloud-heart cloud-heart-one"></span>
+    <span class="cloud-heart cloud-heart-two"></span>
+    <span class="cloud-heart cloud-heart-three"></span>
+    <span class="cloud-heart cloud-heart-four"></span>
+  </div>
+  <div class="ambient-hearts" aria-hidden="true"></div>
+
+  <main>
+    <section class="gate" id="gate" aria-labelledby="gate-title">
+      <div class="gate-art" aria-hidden="true"><span>♡</span><i></i><i></i></div>
+      <div class="gate-copy">
+        <p class="eyebrow">ERDEM &amp; CEMRE · BİZE ÖZEL</p>
+        <h1 id="gate-title">Sana özel<br><em>bir yer… ❤️</em></h1>
+        <p class="gate-intro">Buraya sadece sen girebilirsin.</p>
+        <form id="loginForm" novalidate>
+          <label for="passwordInput">Kalbimizin şifresi</label>
+          <div class="password-row">
+            <input id="passwordInput" type="password" inputmode="numeric" autocomplete="off" placeholder="Şifreni gir" aria-describedby="passwordError" required>
+            <button class="button button-dark" type="submit">İçeri gir <span aria-hidden="true">↗</span></button>
+          </div>
+          <p class="form-error" id="passwordError" aria-live="polite"></p>
+        </form>
+        <div class="gate-foot"><span>♡</span><span>yalnızca bizim hikâyemiz</span><span>♡</span></div>
+      </div>
+    </section>
+
+    <div id="site" class="site hidden">
+      <header class="topbar">
+        <a class="wordmark" href="#home" aria-label="Başlangıca dön">E<span>♡</span>C</a>
+        <button class="menu-toggle" id="menuToggle" type="button" aria-label="Menüyü aç" aria-expanded="false" aria-controls="siteNav"><span></span><span></span></button>
+        <nav id="siteNav" aria-label="Ana menü">
+          <a href="#music">Şarkımız</a><a href="#story">Hikâyemiz</a><a href="#memories">Anılar</a><a href="#keepsakes">Senden bana</a><a href="#letter">Mektubum</a><a href="#surprise">Sürpriz</a>
+        </nav>
+      </header>
+
+      <section class="hero" id="home">
+        <div class="hero-copy">
+          <p class="eyebrow">KÜÇÜK BİR DÜNYA, İKİ KALP</p>
+          <h1>Sana söylemek<br>istediğim <em>bazı şeyler var…</em> ❤️</h1>
+          <p class="hero-lead">Ama hepsini bir anda göremezsin.</p>
+          <a class="text-link" href="#music">Başla ❤️ <span>↓</span></a>
+        </div>
+        <div class="hero-photo-wrap">
+          <img class="hero-photo zoomable" src="images/otogar.jpg" alt="Birlikte güzel bir anımız" fetchpriority="high">
+          <div class="photo-note"><span>birlikte</span><b>♡</b><span>her şey daha güzel</span></div>
+          <span class="hero-stamp" aria-hidden="true">E<br><i>♡</i><br>C</span>
+        </div>
+        <span class="hero-number" aria-hidden="true">01 / BİZ</span>
+      </section>
+
+      <section class="music-section section" id="music">
+        <div class="music-copy">
+          <p class="eyebrow">BU HİKÂYENİN BİR DE SESİ VAR</p>
+          <h2>Şarkımızı<br><em>Seç 🎵❤️</em></h2>
+          <p>Hangisini dinlemek istersen…</p>
+        </div>
+        <div class="music-player">
+          <div class="music-disc" aria-hidden="true"><span>♡</span></div>
+          <div class="track-list">
+            <button class="track-button" type="button" data-song="images/bi-bilsen.mp3" data-title="Bi' Bilsen" aria-pressed="false"><span class="track-index">01</span><span class="track-name">Bi' Bilsen</span><span class="track-action">▶</span></button>
+            <button class="track-button" type="button" data-song="images/piraye.mp3" data-title="PİRAYE" aria-pressed="false"><span class="track-index">02</span><span class="track-name">PİRAYE</span><span class="track-action">▶</span></button>
+          </div>
+        <p class="player-status" id="playerStatus" aria-live="polite">Hangisini dinlemek istersen…</p>
+          <audio id="siteMusic" loop preload="none"></audio>
+        </div>
+      </section>
+
+      <section class="story-section section" id="story">
+        <div class="section-heading">
+          <p class="eyebrow">HER ŞEYİN BİR BAŞLANGICI VAR</p>
+          <h2>Hikâyemizin<br><em>başlangıcı</em> ❤️</h2>
+          <p>Bazı hikâyeler, daha başlamadan önce yazılmaya başlar…</p>
+        </div>
+        <article class="story-paper">
+          <span class="paper-mark" aria-hidden="true">“</span>
+          <div class="story-text">
+            <p>Seni aslında geçen seneden beri seviyordum. Ama aramızda bazı engeller vardı ve sana karşı nasıl davranmam gerektiğini çoğu zaman bilmiyordum.</p>
+            <p>Sen farkında bile değilken sana bakmak, içimde oluşan o heyecanı yaşamak bile benim için farklı bir histi. Okey oynadığımız zamanlarda sana takılmalarım, seni biraz sinirlendirmem bile hoşuma gidiyordu. Çünkü seninle uğraşmak, senden bir tepki almak bile bana iyi geliyordu.</p>
+            <p>Belki sen o zamanlar bunların hiçbirini fark etmiyordun. Ama benim için küçücük bir bakışın bile çok şey ifade ediyordu.</p>
+            <p>Sana baktığımda, içimdeki o heyecanla birlikte sanki karanlık dünyam aydınlanıyordu. ❤️</p>
+            <p>Ve şimdi, geçen sene sadece uzaktan hissettiğim o şeyin bugün bizim hikâyemize dönüşmüş olması benim için gerçekten çok özel.</p>
+          </div>
+          <a class="button button-outline" href="#memories">Anılarımıza Bak ❤️</a>
+          <span class="paper-signature">İyi ki sen, iyi ki biz.</span>
+        </article>
+      </section>
+
+      <section class="memories-section section" id="memories">
+        <div class="section-heading section-heading-row">
+          <div><p class="eyebrow">KÜÇÜK ANLAR, BÜYÜK ANLAMLAR</p><h2>Anılarımız <span>📸❤️</span></h2></div>
+          <p>Birlikte biriktirdiğimiz küçük ama güzel anılar...</p>
+        </div>
+        <div class="memory-grid">
+          <figure class="memory-card memory-childhood">
+            <div class="image-frame"><img class="zoomable" src="images/cocukluk.jpg" alt="Çocukluk anımız" loading="lazy"></div>
+            <figcaption><span class="caption-index">01</span><span>Bir zamanlar birbirimizden habersiz iki küçük çocuk… ❤️</span></figcaption>
+          </figure>
+          <figure class="memory-card memory-now">
+            <div class="image-frame"><img class="zoomable" src="images/otogar.jpg" alt="Birlikte bir anımız" loading="lazy"></div>
+            <figcaption><span class="caption-index">02</span><span>Şimdi ise geçmişimizin bile yan yana olmasını istiyorum. ❤️</span></figcaption>
+          </figure>
+        </div>
+        <div class="memory-note">
+          <span class="note-heart">♡</span>
+          <p>Bazı fotoğraflar yaşanmış bir anı değil, yaşanmasını istediğimiz bir anı anlatır… ❤️<br>Belki bu anıyı gerçekten yaşamadık… ama seninle daha yaşamadığımız o kadar çok güzel an var ki. ❤️</p>
+        </div>
+        <div class="memory-video-block">
+          <div class="video-intro"><p class="eyebrow">HAREKETLİ BİR HATIRA</p><h3>Ve bazı anılar için<br>fotoğraf yetmez… ❤️</h3><p>Seninle böyle sıradan görünen anları bile çok seviyorum. Çünkü benim için önemli olan ne yaptığımız değil, bunu kiminle yaptığım. ❤️</p></div>
+          <div class="video-frame"><video controls playsinline preload="metadata"><source src="images/tatli.mp4" type="video/mp4">Tarayıcın videoyu oynatamıyor.</video></div>
+        </div>
+        <a class="button button-outline memory-continue" href="#keepsakes">Devam Et ❤️</a>
+      </section>
+
+      <section class="keepsakes-section section" id="keepsakes">
+        <div class="section-heading">
+          <p class="eyebrow">AKLIMDA KALAN KÜÇÜK ŞEYLER</p>
+          <h2>Senden Bana<br><em>Kalanlar</em> 💭❤️</h2>
+        </div>
+        <div class="keepsake-grid">
+          <article class="keepsake"><span>01</span><h3>Gülüşün.</h3><p>Bazen hiçbir şey söylemeden bile içimi değiştiren o gülüşün.</p></article>
+          <article class="keepsake"><span>02</span><h3>Bakışın.</h3><p>Özellikle bana bakarken gözlerinin içinin parlaması…</p></article>
+          <article class="keepsake"><span>03</span><h3>Bana bulaşmaların.</h3><p>Bazen sırf benimle uğraşmak için yaptığın o küçük şeyler. 😄</p></article>
+          <article class="keepsake"><span>04</span><h3>Kıskanman.</h3><p>Bazen modunu düşüren o küçücük şeylerin bile bana ne kadar değer verdiğini hissettirmesi.</p></article>
+          <article class="keepsake keepsake-wide"><span>05</span><h3>Arka koltuktan bana bakışın.</h3><p>Belki de en sevdiğim anlardan biri. Araba giderken aynadan göz göze geldiğimiz o uzun bakışlar. ❤️</p></article>
+        </div>
+        <p class="keepsake-ending">Bunların hepsi senden bana kalan küçük şeyler…<br>Ama aslında senden bana kalan en güzel şey, senin kendinsin. ❤️</p>
+        <a class="button button-outline keepsake-continue" href="#letter">Mektubumu Oku 💌</a>
+      </section>
+
+      <section class="letter-section section" id="letter">
+        <div class="letter-decoration" aria-hidden="true">♡</div>
+        <div class="letter-paper">
+          <p class="eyebrow">SANA, KALBİMDEN</p>
+          <h2>Sana Bir<br><em>Mektubum Var</em> 💌</h2>
+          <p class="letter-to">Sevgilim,</p>
+          <div class="letter-body">
+            <p>Bu sene o kadar güzeldi ki… Hani nasıl anlatsam, yan yana olduğumuz her an, her saniye, her dakika benim için ayrı güzeldi. Bana bakman, bakarken çoğu zaman gözlerinin içinin parlaması, insanı huzurlu hissettiren o bakışın, o gülümsemen… Ya da bana bulaşmaların, aklına benimle ilgili kötü bir şey geldiğinde kıskanman, modunun düşmesi… Bunların bile bana değer verdiğini hissettirmesi çok güzeldi.</p>
+            <p>Ama en çok hoşuma giden şeylerden biri, ben araba kullanırken senin arka koltuktan bana bakmandı. Araba giderken uzun uzun bakışmalarımız… Bazen hiçbir şey söylemeden sadece birbirimize bakmamız bile bana yetiyordu. O anlarda sanki etraftaki her şey biraz olsun duruyordu.</p>
+            <p>Ben seninle sadece bugünümüzü değil, geleceğimizi de inşa etmeye çalışıyorum. Elimden geldiğince yanında huzur bulabileceğin, kendin olabileceğin ve mutlu hissedebileceğin bir insan olmak istiyorum. Seninle birlikte kendi kişiliğimi de baştan inşa ediyorum. Çünkü senin hayatıma girmenden sonra bazı şeylere, kendime ve geleceğe bakışım bile değişti.</p>
+            <p>Seninle birlikte daha iyi bir ben olmak istiyorum. Sadece seni seven biri olarak değil, sana iyi gelen, yanında kendini güvende ve huzurlu hissettiğin biri olarak kalmak istiyorum.</p>
+            <p>Ve belki de en güzeli, bütün bunları kusursuz bir şekilde yapamıyor olsam bile, seninle birlikte öğreniyor olmam. Çünkü benim için önemli olan mükemmel bir ilişkiye sahip olmak değil; seninle birlikte güzel bir hayat kurabilmek. ❤️</p>
+          </div>
+          <p class="letter-signature">Her zaman senin, Erdem ♡</p>
+        </div>
+        <a class="button button-dark letter-continue" href="#ending">Sonuna Geliyoruz… ❤️</a>
+      </section>
+
+      <section class="ending-section section" id="ending">
+        <p class="eyebrow">BİR SON DEĞİL</p>
+        <h2>Buraya kadar benimle geldiğin için teşekkür ederim. ❤️</h2>
+        <p>Ama aslında sana anlatmak istediğim her şeyi bu siteye sığdıramam.</p>
+        <p>Çünkü bizim hikâyemiz daha yeni başlıyor… ❤️</p>
+        <p class="surprise-hint">Psst… Sonsuzluk işaretine dokun ❤️</p>
+        <a class="ending-link" href="#surprise">Devamı gelecek… <span>♾️</span></a>
+      </section>
+
+      <section class="surprise-section section" id="surprise">
+        <div class="surprise-heading"><p class="eyebrow">PSST… SANA KÜÇÜK BİR SÜRPRİZİM VAR</p><h2>Sadece sana<br><em>özel bir şey…</em> 💌</h2><p>Bir Şey mi Bitti Sandın Sevgilim? ❤️<br>Aslında sana anlatacaklarım daha yeni başlıyor…</p><button class="button button-dark" id="revealSurprise" type="button" aria-expanded="false" aria-controls="surpriseContent">Sürprizi aç ♡</button></div>
+        <div class="surprise-content hidden" id="surpriseContent">
+          <div class="surprise-prose">
+            <div class="surprise-divider" aria-hidden="true">♡　♡　♡</div>
+            <p>Seninle yaşamak istediğim daha nice anı, kurmak istediğim kocaman bir gelecek var.</p>
+            <p>Belki bugün sana anlatacaklarımın hepsini bu siteye sığdıramadım. Ama birlikte yaşayacağımız günlere daha çok şey sığdırmak istiyorum. ❤️</p>
+            <p>Birlikte güleceğimiz, birbirimize sarılacağımız, bazen tartışıp sonra yine birbirimize döneceğimiz nice günümüz olsun.</p>
+          </div>
+          <button id="revealLoveMessage" class="button button-rose" type="button">Sana bir şey söylemek istiyorum… 💌</button>
+          <div id="loveMessage" class="love-message" aria-live="polite"></div>
+          <div id="floatingLoveHearts" class="floating-love-hearts" aria-hidden="true"></div>
+          <div class="surprise-photo-card"><h3 class="eyebrow">Bizden Bir Hatıra ❤️</h3><div class="image-frame"><img class="zoomable" src="images/surprise-photo.jpg" alt="Bizim güzel bir anımız" loading="lazy"></div></div>
+          <div class="surprise-video video-frame"><video controls playsinline preload="metadata"><source src="images/surprise-video.mp4" type="video/mp4">Tarayıcın videoyu oynatamıyor.</video></div>
+          <h3 class="miniğim">Seni seviyorum Miniğim. ❤️</h3>
+          <p>Ve bu hikâyenin en güzel yanı, henüz yazılmamış olması…</p>
+          <h3 class="surprise-ending">Bu hikâyeyi seninle yazmak istiyorum. ♾️</h3>
+          <p>Daha başlangıçtayız sevgilim… İyi ki varsın. ❤️</p>
+          <p class="forever">Sonsuza kadar bizim hikâyemiz…</p>
+        </div>
+      </section>
+
+      <footer class="footer"><span>İyi ki sen, iyi ki biz.</span><span class="footer-heart">♡</span><small>ERDEM &amp; CEMRE · BİZE ÖZEL</small></footer>
+    </div>
+  </main>
+
+  <div class="lightbox hidden" id="photoLightbox" role="dialog" aria-modal="true" aria-label="Büyütülmüş fotoğraf">
+    <button class="lightbox-close" id="closeLightbox" type="button" aria-label="Fotoğrafı kapat">×</button>
+    <img id="lightboxImage" alt="">
+  </div>
+</body>
+</html>
